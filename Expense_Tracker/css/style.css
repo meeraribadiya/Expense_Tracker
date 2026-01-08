@@ -1,0 +1,131 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.summary {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Legend styling */
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px 16px;
+    margin-top: 12px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.legend-item .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.legend-item .legend-text { font-size: 14px; }
+
+button {
+    padding: 10px 14px;
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+/* Remove number input spinners for easier typing of large values */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    appearance: textfield; /* Standard */
+    -moz-appearance: textfield; /* Firefox */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+/* Simple inline error message */
+.error {
+    color: #b00020;
+    margin: 8px 0 4px;
+    min-height: 18px;
+}
+
+/* Button row for form actions */
+.btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.btn-row button:first-child {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #3b82f6;
+}
+
+button:hover {
+    background: #f3f4f6;
+}
+
+.btn-row button:first-child:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Basic responsiveness */
+@media (max-width: 600px) {
+    body { margin: 10px; }
+    .form-box { width: 95%; padding: 16px; }
+    table { font-size: 14px; }
+    th, td { padding: 8px; }
+    button { margin: 6px 4px; padding: 8px; }
+}
